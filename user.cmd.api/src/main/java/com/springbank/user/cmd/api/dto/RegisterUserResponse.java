@@ -1,7 +1,9 @@
 package com.springbank.user.cmd.api.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
 public class RegisterUserResponse extends BaseResponse{
 
     private String id;
