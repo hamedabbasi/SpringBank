@@ -36,7 +36,7 @@ public class RegisterUserController {
 
         } catch (Exception e) {
             String safeErrorMessage = "Error while processing register user request for id - " + id;
-            System.out.println(e.toString());
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(new RegisterUserResponse(id, safeErrorMessage), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

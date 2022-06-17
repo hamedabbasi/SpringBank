@@ -1,4 +1,4 @@
-package com.springbank.user.cmd.api.dto;
+package com.springbank.user.query.api.queries;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BaseResponse {
-    private String message;
+public class FindUserByIdQuery {
+    private String id;
 }

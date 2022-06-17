@@ -1,7 +1,7 @@
 package com.springbank.user.cmd.api.controllers;
 
 import com.springbank.user.cmd.api.commands.UpdateUserCommand;
-import com.springbank.user.cmd.api.dto.BaseResponse;
+import com.springbank.user.core.dto.BaseResponse;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +31,7 @@ public class UpdateUserController {
             return new ResponseEntity<>(new BaseResponse("User successfully updated!"), HttpStatus.OK);
         } catch (Exception e) {
             String safeErrorMessage = "Error while processing update user request for id - " + id;
-            System.out.println(e.toString());
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(new BaseResponse(safeErrorMessage), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

@@ -16,7 +16,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collation = "users")
+@Document(collection = "user")
 public class User {
     @Id
     private String id;

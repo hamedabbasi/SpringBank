@@ -1,10 +1,10 @@
 package com.springbank.user.cmd.api.dto;
 
+import com.springbank.user.core.dto.BaseResponse;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-public class RegisterUserResponse extends BaseResponse{
+public class RegisterUserResponse extends BaseResponse {
 
     private String id;
 
