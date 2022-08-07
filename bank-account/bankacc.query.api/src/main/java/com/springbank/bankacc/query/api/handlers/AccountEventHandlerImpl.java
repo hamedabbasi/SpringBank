@@ -34,6 +34,8 @@ public class AccountEventHandlerImpl implements AccountEventHandler {
                 .balance(event.getOpeningBalance())
                 .creationDate(event.getCreationDate())
                 .build();
+
+        accountRepository.save(bankAccount);
     }
 
     @EventHandler
