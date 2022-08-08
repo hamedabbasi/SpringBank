@@ -1,0 +1,32 @@
+server:
+  port: 9092
+  # validation since spring boot 2.3
+  error:
+    include-message: always
+    include-binding-errors: always
+
+
+spring:
+  data:
+    mongodb:
+      host: mongo-container
+      port: 27017
+      database: bank
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://mysql-container:3306/bank
+    username: root
+    password: springbankRootPsw
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: springbankSigningKey
+axon:
+  axonserver:
+    servers: axon-server

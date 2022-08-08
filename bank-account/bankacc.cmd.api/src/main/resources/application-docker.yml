@@ -1,0 +1,22 @@
+server:
+  port: 9091
+  # validation since spring boot 2.3
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  data:
+    mongodb:
+      host: mongo-container
+      port: 27017
+      database: bank
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: springbankSigningKey
+axon:
+  axonserver:
+    servers: axon-server
